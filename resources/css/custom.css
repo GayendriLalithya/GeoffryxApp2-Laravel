@@ -1,0 +1,37 @@
+/* dropdown-link.blade.php */
+.custom-dropdown-link:hover, .custom-dropdown-link:focus {
+    background-color: #f8f9fa; /* Closer to Tailwind's gray-100 */
+    color: #343a40; /* Closer to Tailwind's gray-700 */
+}
+
+/* nav-link.blade.php */
+.custom-focus {
+    transition: border-color 150ms ease-in-out, color 150ms ease-in-out;
+    focus-within {
+        color: #495057; /* dark color for focused text */
+        border-color: #adb5bd; /* gray color for focused border */
+    }
+}
+
+/* primary-button.blade.php */
+.btn-primary:hover {
+    background-color: #4a5568; /* Tailwind gray-700 equivalent */
+}
+.btn-primary:focus {
+    background-color: #4a5568; /* Focus background */
+    box-shadow: 0 0 0 0.2rem rgba(90, 113, 218, 0.5); /* Indigo focus ring */
+}
+.btn-primary:active {
+    background-color: #2d3748; /* Tailwind gray-900 equivalent */
+}
+
+/* secondary-button.blade.php */
+.btn-custom:focus {
+    box-shadow: 0 0 0 2px #eff3ff, 0 0 0 4px #4f46e5; /* Example to mimic focus:ring-indigo-500 */
+}
+
+/* text-input.blade.php and textarea.blade.php */
+.form-control:focus {
+    border-color: #667eea; /* Indigo color similar to Tailwind's indigo-500 */
+    box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25); /* Light indigo background on focus */
+}
