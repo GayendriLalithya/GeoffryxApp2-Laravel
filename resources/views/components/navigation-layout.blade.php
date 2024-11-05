@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="me-3">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="h-auto" style="width: 36px;" />
+                        <img src="{{ asset('images/geoffreyx-logo.png') }}" alt="GeoffreyX Logo"/>
                     </a>
                 </div>
 

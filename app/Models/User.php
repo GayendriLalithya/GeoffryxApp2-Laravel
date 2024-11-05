@@ -10,7 +10,19 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    protected $primaryKey = 'user_id';
+    use HasFactory, Notifiable;
 
-    protected $fillable = ['name', 'contact_no', 'address', 'email', 'password', 'user_type'];
+    protected $primaryKey = 'user_id'; // Ensure this is set if you're using 'user_id' instead of 'id'
+
+    protected $fillable = [
+        'name', 'contact_no', 'address', 'email', 'password', 'user_type'
+    ];
+
+    protected $hidden = [
+        'password',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
